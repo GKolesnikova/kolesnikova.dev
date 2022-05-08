@@ -1,23 +1,10 @@
 <html>
 	<head>
 		<title>Galina Kolesnikova</title>	
-		<meta charset="utf-8">
-		<link type="text/css" rel="stylesheet" href="/App/assets/css/main.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<?php require \App\View::$templatePath . '\head.php';?>
 	</head>
 	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/home8/aboutMyCity.php">About my city</a></li>
-					<li><a href="/home8/aboutMe.php">About me</a></li>
-					<li><a href="/home8/comments.php">Comments</a></li>
-					<li><a href="/home8/mathematics.php">Mathematics</a></li>
-				</ul>
-			</nav>
-		</header>
+		<?php require \App\View::$templatePath . '\header.php';?>
 		<section id="main">
 			<div class="container">
 				<div class="info">
@@ -59,16 +46,6 @@
 				 
 			</div>
 		</section>
-		<footer>
-			<ul>	
-				<div class="about-city">
-					<li><a class="hamburg" href="https://www.ndr.de/nachrichten/hamburg/index.html">Hamburg news</a></li>
-					<li><a class="hamburg" href="https://www.wetter.com/wetter_aktuell/wettervorhersage/16_tagesvorhersage/deutschland/hamburg/DE0004130.html">Hamburg weather</a></li>	
-				</div>
-				<li>
-					<a class="animal" href="https://www.tag24.de/thema/tiere">News in the animal world</a>
-				</li>	
-			</ul> 		
-		</footer>
+		<?php require \App\View::$templatePath . '\footer.php';?>
 	</body>
 </html>
