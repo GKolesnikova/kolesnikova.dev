@@ -1,0 +1,146 @@
+body {
+	margin: 0;
+	padding: 0;		
+}
+
+ul {
+	list-style-type: none;
+}
+
+nav ul { 
+	display: flex;
+	margin: 0;
+	padding: 0;	
+}
+
+li {
+	margin: 0 10px;
+	font-size: 20px;
+}
+
+li:first-child {
+	margin: 0;
+}
+
+li:last-child{
+	margin: 0;
+}
+
+header {
+	text-align: center;
+	margin: 20px;
+}
+
+nav {
+	display: inline-block;
+}
+
+a {
+	text-decoration:none;
+	color: #0d6efd
+}
+
+a:hover {
+	color: #f1d827;
+}
+
+#main {
+	background: linear-gradient( rgb(119, 182, 238) ,  #03f971 );
+}
+
+.container {
+	max-width: 1000px;	
+	margin: auto;
+	display: flex;
+}
+
+.info {  
+	width: 49%;
+	color: white;
+    font-family: Bradley Hand, cursive;
+    text-shadow: 1px 1px #57d8ed;
+	padding-top: 130px;	
+} 
+
+.info h1 {
+	font-size: 150%;
+	
+}
+
+h1 span {
+    font-size: 20px;
+}
+
+.info .text {
+	font-size: 170%;
+	color:  #f1d827;
+    margin-bottom: 25px;
+}
+
+.text strong {
+	color: white;
+}
+
+.icons {
+	margin: 25px 0;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 127%;
+}
+
+
+
+.link {
+    padding: 10px 20px;
+	font-size: 20px;
+	
+}
+
+.cv {
+	color: #65ff1f;
+    text-shadow: 2px 2px black;
+}
+
+.git {
+	 color: black;
+	 font-size: 30px;
+}
+
+.linkedin {
+	color: #1e04f1;
+	font-size: 30px;
+}
+
+.foto-box {
+	width: 48%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#main_foto {
+	width: 100%;
+	 
+	
+}
+
+footer{
+	margin: 20px;
+}
+
+.about-city {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+footer a {
+	border: 0 20px ;
+	position: relative;
+	
+}
+
+@media (max-width:576px) {
+	a {
+		color: pink;
+	}
+}
