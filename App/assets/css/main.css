@@ -45,7 +45,7 @@ a:hover {
 }
 
 #main {
-	background: linear-gradient( rgb(119, 182, 238) ,  #03f971 );
+	background: linear-gradient(rgb(119, 182, 238),  #03f971 );
 }
 
 .container {
@@ -88,8 +88,6 @@ h1 span {
 	font-size: 127%;
 }
 
-
-
 .link {
     padding: 10px 20px;
 	font-size: 20px;
@@ -119,8 +117,6 @@ h1 span {
 
 #main_foto {
 	width: 100%;
-	 
-	
 }
 
 footer{
@@ -133,10 +129,10 @@ footer{
 	flex-direction: row;
 }
 
-footer a {
-	border: 0 20px ;
-	position: relative;
-	
+.animal {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 }
 
 @media (max-width:576px) {
