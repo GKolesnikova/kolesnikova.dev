@@ -3,15 +3,18 @@
 namespace App;
 
 class View {
-	public $templatePath;
+	public static $templatePath = __DIR__ . '\templates\\';
 	
-	public  function __construct() {
-		$this->templatePath = __DIR__ . '\templates\\';
-	}
-	
-	public  function render(string $fileName) {
+	public function render(string $fileName, array $data = []) {
+		ob_start();
+        foreach ($data as $prop => $value) {
+            $$prop = $value;
+        }
+        include View::$templatePath . $fileName;
+        $content = ob_get_contents();
+        ob_end_clean();
 		
-		require $this->templatePath . $fileName;
+        return $content;
 	}
-	
 }
+
