@@ -44,6 +44,12 @@ a:hover {
 	color: #f1d827;
 }
 
+@media (max-width:576px) {
+	a {
+		color: pink;
+	}
+}
+
 #main {
 	background: linear-gradient(rgb(119, 182, 238),  #03f971 );
 }
@@ -135,8 +141,9 @@ footer{
 	flex-direction: row;
 }
 
-@media (max-width:576px) {
-	a {
-		color: pink;
-	}
+
+
+.hamburg {
+	height: 70%;
+	width: 70%;
 }
