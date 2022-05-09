@@ -1,1 +1,0 @@
-Das ist mein selbst geschriebene CMS, das MVC-Architektur realisiert
