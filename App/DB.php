@@ -7,8 +7,8 @@ class DB
 
 	public function __construct() 
 	{
-		$dsn = 'mysql: host=127.0.0.1; dbname=hamburg';
-		$this->dbh = new \PDO($dsn, 'root', '');
+		$dsn = 'mysql: host='.DB_HOST.'; dbname='.DB_DATABASE;
+		$this->dbh = new \PDO($dsn, DB_USER, DB_PASSWORD);
 	}
 
 	public function execute(string $sql)
