@@ -1,3 +1,5 @@
+
+
 body {
 	margin: 0;
 	padding: 0;		
@@ -129,21 +131,67 @@ footer{
 	margin: 20px;
 }
 
-.about-city {
+footer ul {
 	display: flex;
 	justify-content: center;
-	flex-direction: row;
+	flex-direction: row;  
 }
-
-.animal {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
+ 
+footer li {
+	padding: 0 10px;   
 }
-
 
 
 .hamburg {
-	height: 70%;
-	width: 70%;
+	height: 390px;
+	width: 700px;
+	margin-bottom: 20px;
 }
+
+.welcome {
+	text-align: center;
+	margin: 20px 0;
+	color: #062ef3;
+}
+
+.sight {
+	margin: 100px 10px;
+	text-align: justify;
+	font-size: 17px;
+ 
+}
+
+.sight-title {
+	display: flex;
+	‎margin-bottom: 1rem;
+}
+
+.hamburg-sights {
+	
+	height: 557px;
+	width: 900px;
+}
+
+.title-website-address {
+	padding: 0 25px;
+}
+ 
+.title-website-address p{
+	padding: 0;
+	margin:0;
+}
+ 
+.title {
+	color: #e58018;
+}
+
+.address {
+	color: #19b96f;
+}
+
+.sight-descr {
+	padding: 30px 0;
+	 
+}
+
+ 

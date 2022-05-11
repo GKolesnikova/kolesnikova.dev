@@ -3,38 +3,44 @@
 	<head>
 		<title>About me</title>
 		<?php require \App\View::$templatePath . '\head.php';?>
-		<!--<link type="text/css" rel="stylesheet" href="/App/assets/css/about_me.css">-->
 	</head>
 	<body>
 		<?php require \App\View::$templatePath . '\header.php';?>
-		<div class="container">
-			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-indicators">
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		<div class="container-about">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="/App/assets/img/hamburg.jpg" class="d-block w-100" alt="Девушка с ребенком стоят в окружении клумб парка Таштагола">
+							</div>
+							<div class="carousel-item">
+								<img src="/App/assets/img/Deichstrasse.jpg" class="d-block w-100" alt="Девушку провожают перед отъездом на вокзале">
+							</div>
+							<div class="carousel-item">
+								<img src="/App/assets/img/Landungsbrücken.jpeg" class="d-block w-100" alt="Красивый пейзаж.Синее небо, голубое чистое озеро и вокруг высокие горы">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>	
 				</div>
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="/App/assets/img/hamburg.jpg" class="d-block w-100" alt="Девушка с ребенком стоят в окружении клумб парка Таштагола">
-					</div>
-					<div class="carousel-item">
-						<img src="/App/assets/img/Deichstrasse.jpg" class="d-block w-100" alt="Девушку провожают перед отъездом на вокзале">
-					</div>
-					<div class="carousel-item">
-						<img src="/App/assets/img/Landungsbrücken.jpeg" class="d-block w-100" alt="Красивый пейзаж.Синее небо, голубое чистое озеро и вокруг высокие горы">
-					</div>
-				</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
-			</div>	
+			</div>
 			
+
+
+
 			<br>
 			<br>
 			<br> 
@@ -57,7 +63,7 @@
 			</div>
 			
 		<?php
-			if (!empty($_POST['message'])) {
+			/*if (!empty($_POST['message'])) {
 				$messageNew = $_POST['message'];
 				$commentsFile = __DIR__ . '/book.txt';
 				file_put_contents($commentsFile, $messageNew);
@@ -83,28 +89,34 @@
 					 }
 				}
 			 }	
+*/
 		?>
-			<form action="/?page=main&action=city" method="post" enctype="multipart/form-data">
-				<input type="file" name="myimage">
-				<input type="submit">
-			</form>
+			<div class="row">
+				<div class="col-md-12">
+					<form action="/?page=main&action=city" method="post" enctype="multipart/form-data">
+						<input type="file" name="myimage">
+						<input type="submit">
+					</form>
+				</div>
+			</div>
+			
 			<br>
 			<br>
 			<br>
 			<div id="some" class="row img-container">	
 				<?php 
-					assert(
+					/*assert(
 						is_array(getFilesNameByPath(__DIR__ . '/images/'))
 					);
 				
-					foreach (getFilesNameByPath(__DIR__ . '/images/') as $fotoName) {
+					foreach (getFilesNameByPath(__DIR__ . '/images/') as $fotoName) { */
 				?>
-					<div class="col-md-4">
+					<!--<div class="col-md-4">
 						<img class="col-md-12 img-responsive" src="/images/<?php echo $fotoName; ?>">
-						<a href="/image.php?file=<?php echo $fotoName; ?>">В полный размер</a>
-					</div>
+						<a href="/image.php?file=<?php// echo $fotoName; ?>">В полный размер</a>
+					</div> ->
 				<?php 
-					}
+					/*} */
 				?>
 			</div>
 	
@@ -118,7 +130,7 @@
 			<br>
 			<div class="row">
 				<?php 
-					if (!empty($_POST['message'])){
+					/*if (!empty($_POST['message'])){
 						file_put_contents(__DIR__ . '/book.txt', $_POST['message'] . "\n", FILE_APPEND);
 					}
 					$comments = file(__DIR__ . '/book.txt', FILE_IGNORE_NEW_LINES);
@@ -126,14 +138,14 @@
 						foreach ($comments as $comment) {
 							if (empty($comment)) {
 								continue;
-							}				 
+							}			*/	 
 				?>
 					<div class="col-md-12 comment">
-						<?php echo $comment ?>						 
+						<?php // echo $comment ?>						 
 					</div>
 				<?php
-						}
-					}
+				/*		}
+					} */
 				?>
 			</div>
 			
@@ -151,7 +163,7 @@
 				
 				 
 					<?php  
-						 function getFilesNameByPath($path) {
+						/* function getFilesNameByPath($path) {
 							$result = scandir($path);
 							if (scandir($path) == false) {
 								$result = [];
@@ -182,26 +194,9 @@
 						
 						getCommentsFromFiles();
  
-
+*/
  				?>
 		</div>	
 		<?php require \App\View::$templatePath . '\footer.php';?>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
